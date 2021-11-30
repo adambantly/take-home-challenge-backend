@@ -1,0 +1,16 @@
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.App * {
+  font-family: sans-serif;
+}
+
+:root {
+  --focusColor: lightgrey;
+  --fieldSize: 3rem;
+}

@@ -1,0 +1,25 @@
+.Field {
+  width: var(--fieldSize);
+  height: var(--fieldSize);
+
+  border-radius: 0;
+  background: transparent;
+  border: inherit;
+  color: transparent; /* allows fading in auto filled fields */
+}
+
+.Field:hover:not(:disabled),
+.Field:focus {
+  outline: none;
+  background: var(--focusColor);
+}
+
+.Field--filled {
+  color: black;
+}
+
+/* auto filled fields appear after a tiny delay to make it
+feel like the computer was "thinking" */
+.Field--autoFilled {
+  transition: color 0.1s linear 0.1s;
+}

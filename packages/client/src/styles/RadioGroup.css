@@ -1,0 +1,10 @@
+.RadioGroup-legend {
+  text-align: start;
+}
+
+.RadioGroup-label {
+  position: relative;
+  display: block;
+  margin-left: 1rem;
+  text-align: start;
+}

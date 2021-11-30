@@ -1,0 +1,66 @@
+/* autoprefixer grid: autoplace */
+.Board-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid black;
+}
+
+.Board-grid-wrapper {
+  width: fit-content;
+  margin: auto;
+  position: relative;
+}
+
+.Board-line {
+  width: 100%;
+  border-bottom: 3px double darkgrey;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+/* only show winning board line when game was won */
+.Board:disabled .Board-line {
+  display: block;
+}
+
+/* below classes position the line to cross through winning line */
+.Board-line--r0 {
+  top: calc(0.5 * var(--fieldSize));
+}
+
+.Board-line--r1 {
+  top: calc(1.5 * var(--fieldSize));
+}
+
+.Board-line--r2 {
+  top: calc(2.5 * var(--fieldSize));
+}
+
+/* awkward 49 to make room for the DOUBLE line */
+.Board-line--c0 {
+  transform: rotate(90deg);
+  top: 49%;
+  left: calc(-1 * var(--fieldSize));
+}
+
+.Board-line--c1 {
+  transform: rotate(90deg);
+  top: 49%;
+}
+
+.Board-line--c2 {
+  transform: rotate(90deg);
+  top: 49%;
+  left: var(--fieldSize);
+}
+
+.Board-line--d0 {
+  transform: rotate(45deg);
+  top: 49%;
+}
+
+.Board-line--d1 {
+  transform: rotate(-45deg);
+  top: 49%;
+}
